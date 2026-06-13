@@ -50,8 +50,16 @@ def get_table_with_query(table_name, query=None):
 def get_arots():
     return get_table_with_query('arots', "select * from arots")
 
+def get_products():
+    return get_table_with_query('products', "select * from products")
+
+def get_units():
+    return get_table_with_query('units', "select * from units")
+
 if __name__ == '__main__':
     arots = get_arots()
     if arots is not None:
+        print("Arots preview:")
         print(arots.head())
+
 
